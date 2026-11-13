@@ -34,7 +34,7 @@ function Login() {
                 password,
             });
             saveAuth(data.token, data.user);
-            navigate('/');
+            navigate('/', { state: { welcome: true } })
         } catch (err) {
             setError(getErrorMessage(err));
         } finally {

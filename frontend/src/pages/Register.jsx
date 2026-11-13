@@ -43,7 +43,7 @@ function Register() {
                 password_confirmation: confirm,
             });
             saveAuth(data.token, data.user); // registration also logs the user in
-            navigate('/');
+            navigate('/', { state: { welcome: true } })
         } catch (err) {
             setError(getErrorMessage(err));
         } finally {

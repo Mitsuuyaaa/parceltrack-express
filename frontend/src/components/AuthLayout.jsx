@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Home from '../pages/Home'; // adjust the path if Home.jsx is in another folder
+import Homepage from '../pages/Homepage'; // adjust the path if Home.jsx is in another folder
 
 /* ---------- Icons ---------- */
 const iconProps = {
@@ -147,7 +147,7 @@ export function AuthModal({ title, backTo, children }) {
         <>
             {/* Homepage stays visible behind the modal */}
             <div aria-hidden="true">
-                <Home />
+                <Homepage />
             </div>
 
             {/* Dim + blur overlay with the modal */}
